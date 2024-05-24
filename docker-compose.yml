@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  github-actions-simulator:
+    build: .
+    environment:
+      - GITHUB_REF=${GITHUB_REF}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    volumes:
+      - ./artifacts:/artifacts
